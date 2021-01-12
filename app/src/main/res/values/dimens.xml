@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <dimen name="half_unit">4dp</dimen>
+    <dimen name="one_unit" tools:keep="@dimen/one_unit">8dp</dimen>
+    <dimen name="two_unit">16dp</dimen>
+    <dimen name="three_unit" tools:keep="@dimen/three_unit">24dp</dimen>
+    <dimen name="four_unit" tools:keep="@dimen/four_unit">32dp</dimen>
+
+    <dimen name="album_image_height" tools:keep="@dimen/album_image_height">30dp</dimen>
+    <dimen name="album_image_width" tools:keep="@dimen/album_image_width">40dp</dimen>
+</resources>
