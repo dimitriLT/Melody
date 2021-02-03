@@ -1,6 +1,8 @@
 package com.dimitri.le.torriellec.melody.repository.di
 
+import com.dimitri.le.torriellec.melody.domain.AlbumRepository
 import com.dimitri.le.torriellec.melody.repository.AlbumRepositoryImpl
+import com.dimitri.le.torriellec.melody.repository.ApiDataSource
 import com.dimitri.le.torriellec.melody.repository.api.ApiDataSourceImpl
 import com.dimitri.le.torriellec.melody.repository.api.retrofit.ApiRetrofitFactory
 import com.dimitri.le.torriellec.melody.repository.mapper.AlbumMapper
@@ -20,7 +22,7 @@ val apiDataSourceModule = module {
     single {
         ApiDataSourceImpl(
             apiService = get()
-        )
+        ) as ApiDataSource
     }
 }
 
@@ -35,7 +37,7 @@ val repositoryModule = module {
         AlbumRepositoryImpl(
             apiDataSource = get(),
             albumMapper = get()
-        )
+        ) as AlbumRepository
     }
 }
 
